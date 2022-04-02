@@ -1,15 +1,18 @@
 .centralizar{
 
   text-align: center;
+  
 
 
 }
 li:hover{
   background-color: green;
+  list-style: none;
 }
 
 li:active{
   color: white;
 }
+
 
   
