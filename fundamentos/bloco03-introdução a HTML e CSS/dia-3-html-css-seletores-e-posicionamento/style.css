@@ -1,0 +1,15 @@
+.centralizar{
+
+  text-align: center;
+
+
+}
+li:hover{
+  background-color: green;
+}
+
+li:active{
+  color: white;
+}
+
+  
