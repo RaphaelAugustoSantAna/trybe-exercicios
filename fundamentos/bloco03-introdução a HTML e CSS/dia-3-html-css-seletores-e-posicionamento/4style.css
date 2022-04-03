@@ -1,0 +1,23 @@
+.lista-ordenada{
+    background-color: yellow;
+    font-weight: bold;
+
+}
+.texto-verde{
+    color: green;
+}
+.texto-M{
+    text-transform: uppercase;
+
+}
+.header {
+    color: red;
+}
+.h1{
+    font-size: 40px;
+    border: 1px solid black;
+    color: red;
+}
+li{
+    font-size: 20px;
+}
