@@ -21,3 +21,24 @@
 li{
     font-size: 20px;
 }
+
+.fundoblue{
+    color: blue;
+
+}
+.java{
+    background-color: pink;
+}
+.bonus li:hover {
+    font-weight:bold;
+    
+}
+.w3s li:hover{
+    background-color: green;
+}
+    
+
+
+
+
+
