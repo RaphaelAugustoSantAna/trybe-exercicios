@@ -29,12 +29,25 @@ li{
 .java{
     background-color: pink;
 }
-.bonus li:hover {
-    font-weight:bold;
+#bonus li a:hover {
+    font-weight:700;
     
 }
-.w3s li:hover{
-    background-color: green;
+
+#bonus li a[href*="stackoverflow"]{
+    color: orange;
+}
+#bonus li a[href*="w3schools"]{
+    color: green;
+}
+#bonus li a[href*="mozilla"]{
+    color: black;
+}
+#bonus li a[href*="devdocs"]{
+    color: yellow;
+}
+#bonus li a[href*="trybe"]{
+    color: green;
 }
     
 
