@@ -3,9 +3,9 @@ body{
     width: 950px;
     margin:auto;
 }
-header, section, nav, table, footer{
+header, section, nav, aside, table, footer{
     font-family: monospace;
-    font-size: 10px;
+    font-size: 15px;
     border-radius: 10px;
    
     text-align: center;
@@ -18,16 +18,31 @@ header{
 }
 
 aside{
-    display: inline-block;
+    text-align: center;
     background-color: antiquewhite;
-    height: 500px;
-    width: 150px;
-    margin-top: 700px;
-    margin-left: 796px;
-    margin-right: 0px;
-    margin-top: 0px;
-    z-index: 1;
+    height: 200px;
+    width: 215px;
+    margin-left: 280px;
+   
 }
-#lateral{
-    width: 150px;
+
+
+table, tr, td {
+    text-align: center;
+    border: 1px solid #ddd;
+    border-collapse: collapse;
+    margin-left: 10px;
+}
+
+img{
+    width: 250px;
+}
+#video{
+    display: inline-block;
+    text-align: center;
+    margin-left: 110px;
+}
+
+#links{
+display: inline-block;
 }
