@@ -1,4 +1,4 @@
-const comida = 'pastel';
+const comida = 'pã';
 const bebida = 'cafézinho';
 
 if (bebida === 'cafézinho' && comida === 'pão na chapa') {
