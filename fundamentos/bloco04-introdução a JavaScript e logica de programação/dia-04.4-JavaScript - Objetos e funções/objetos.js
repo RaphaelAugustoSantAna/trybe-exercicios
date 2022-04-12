@@ -1,4 +1,3 @@
-
 //exercicio de fixação
 
 // let player = {
@@ -32,6 +31,6 @@ let car = {
   manufacturer: 'Audi',
   year: 2020
 };
-  for(let key in car){
-    console.log(key, car [key]);
-  };
+for (let key in car) {
+  console.log(key, car[key]);
+};
