@@ -55,3 +55,24 @@ novoBotao.id = novoBotaoID;
 caixaBotao.appendChild(novoBotao);
 };
 botaoFeriado('feriados');
+
+//exercicio 3
+function displayFeriado(){
+ let feriadoBotao = document.querySelector('#btn-feriado');
+ let feriadao = document.querySelectorAll('.feriado');
+ let corDeFundo = 'rgb(238,238,238)';
+ let novaCor = 'white';
+
+ feriadoBotao.addEventListener('click',function(){
+     for(let index = 0; index < feriadao.length; index += 1){
+        if(feriadao[index].style.corDeFundo === novaCor){
+         feriadao[index].style.corDeFundo = corDeFundo;
+        }else{
+            feriadao[index].style.corDeFundo = novaCor;
+        }
+     }
+ })
+};
+displayFeriado();
+
+//exercicio 4 
