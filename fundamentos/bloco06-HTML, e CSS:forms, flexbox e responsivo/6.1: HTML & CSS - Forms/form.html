@@ -21,7 +21,7 @@
                 name="campoNome"
                 min="10"
                 max="40"/>
-            </div><br>
+            </div>
 
             <div>
                 <!--Email-->
@@ -31,7 +31,7 @@
                 id="campoEmail"
                 min="10"
                 max="50"/>
-            </div><br>
+            </div>
 
             <div>
                 <!--Destino preferido-->
@@ -55,8 +55,28 @@
                 rows="10"
                 maxlength="500">
             </textarea>
-            </div><br>
+            </div>
+
+            <!--melhor data para viagem-->
+            <div>
+                <label for="melhorData">Qual a melhor data para realizar a sua viagem?</label>
+                <input type="date" name="melhorData" id="melhorData">
+            </div>
+
+            <!--Receber notificações-->
+            <div>
+              <label for="ofertasim">Gostaria de receber outras incríveis oportunidades oferecidas pela Trybe?</label> 
+              <input type="checkbox" name="oferta" id="ofertasim"/>Sim. <br>
+              <input type="checkbox" name="oferta" id="ofertanao"/>Não.
+            </div>
+
+            <!--imagens de ferias-->
+            <div>
+                <label for="fotosViagens">compartilhar fotos</label>
+                <input type="file" name="fotosViagens" id="fotosViagens">
+            </div>
             
+              
         </form>
 
     </main>
