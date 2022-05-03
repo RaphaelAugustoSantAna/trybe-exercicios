@@ -75,6 +75,7 @@
   
   .aside-container {
     display: flex;
+    flex-basis: 350px;
     flex-direction: column;
     margin: 20px;
   }
