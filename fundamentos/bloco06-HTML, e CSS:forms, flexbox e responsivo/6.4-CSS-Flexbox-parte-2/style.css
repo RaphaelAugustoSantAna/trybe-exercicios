@@ -23,10 +23,12 @@
   .menu-container {
     display: flex;
     flex-basis: 500px;
+    flex-grow: 1;
     order: 1;
   }
   
   .menu-container ul {
+    align-self: center;
     display: flex;
     justify-content: space-around;
     width: 100%;
