@@ -12,7 +12,6 @@
   .header-container {
     background-color: #5C687C;
     display: flex;
-    flex-flow: row-reverse;
   }
   
   .logo-container {
@@ -24,6 +23,7 @@
   .menu-container {
     display: flex;
     flex-basis: 500px;
+    order: 1;
   }
   
   .menu-container ul {
