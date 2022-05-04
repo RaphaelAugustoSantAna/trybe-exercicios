@@ -44,6 +44,15 @@ figcaption {
     font-size: .8em;
 }
 
+@media screen and (max-width: 1300px) {
+    body{
+        background-color: rgb(250, 129, 250);
+        font-size: 30px;
+        margin: 15px;
+    }
+    
+}
+
 @media screen and (min-width:800px) {
    body{
        background-color:rgb(250, 231, 250) ;
