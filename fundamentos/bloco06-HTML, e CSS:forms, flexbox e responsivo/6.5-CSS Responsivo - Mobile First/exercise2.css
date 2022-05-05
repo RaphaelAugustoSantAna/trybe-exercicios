@@ -17,7 +17,7 @@ html {
 /* tela para smartphone */
   @media screen and (max-width:767px) {
       body{
-          background-color: blue;
+          background-color: rgb(169, 169, 204);
       }
 
       .container{
@@ -26,10 +26,16 @@ html {
       
   }
 
-  /* tela para desktop 
+  /* tela para desktop  */
   @media screen and (min-width:1024px){
-      
-  } */
+      body{
+        background-color: greenyellow;
+      }
+
+      .container{
+          flex-wrap: nowrap;
+      }
+  }
 
 
 
