@@ -7,11 +7,14 @@
 }
 li:hover{
   background-color: green;
-  list-style: none;
 }
 
 li:active{
   color: white;
+}
+
+li{
+  list-style: none;
 }
 
 
