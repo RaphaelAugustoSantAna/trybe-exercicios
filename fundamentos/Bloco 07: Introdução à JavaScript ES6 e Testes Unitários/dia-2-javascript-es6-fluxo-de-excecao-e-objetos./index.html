@@ -17,8 +17,12 @@
     <script>
 
       function verifyIsNumber(value1, value2) {
-        if (!value1 || !value2) {
-          throw new Error("Informe os dois valores para realizar a soma!");
+        if (isNaN(value1) || isNaN(value2)) {
+          throw new Error("Informe apenas números para realizar a soma!");
+        }
+
+        if(!value1 || !value2){
+            throw new Error ("Informe os dois valores para realizar a soma")
         }
       }
 
