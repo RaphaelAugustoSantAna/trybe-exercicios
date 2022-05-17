@@ -63,6 +63,22 @@
 
 // .every
 
+// const people = [
+//     { name: 'Mateus', age: 18 },
+//     { name: 'José', age: 16 },
+//     { name: 'Ana', age: 23 },
+//     { name: 'Cláudia', age: 20 },
+//     { name: 'Bruna', age: 19 },
+//   ];
+  
+//   const verifyAges = (arr, minimumAge) => {
+//     return arr.every((idade) => idade === minimumAge);
+//   }
+  
+//   console.log(verifyAges(people, 18));
+
+// .sort
+
 const people = [
     { name: 'Mateus', age: 18 },
     { name: 'José', age: 16 },
@@ -71,8 +87,6 @@ const people = [
     { name: 'Bruna', age: 19 },
   ];
   
-  const verifyAges = (arr, minimumAge) => {
-    return arr.every((idade) => idade === minimumAge);
-  }
+  people.sort((personA, personB)=> personB.age - personA.age);
   
-  console.log(verifyAges(people, 18));
+  console.log(people);
