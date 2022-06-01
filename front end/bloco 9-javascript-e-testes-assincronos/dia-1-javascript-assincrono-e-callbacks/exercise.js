@@ -91,18 +91,18 @@
 
 //Exercicio - 4
 
-const messageDelay = () => Math.floor(Math.random() * 5000);
+// const messageDelay = () => Math.floor(Math.random() * 5000);
 
-const getMarsTemperature = () => {
-  const maxTemperature = 58;
-  return Math.floor(Math.random() * maxTemperature);
-};
+// const getMarsTemperature = () => {
+//   const maxTemperature = 58;
+//   return Math.floor(Math.random() * maxTemperature);
+// };
 
-// crie a função sendMarsTemperature abaixo
+// // crie a função sendMarsTemperature abaixo
 
-const sendMarsTemperature = () =>{
-    const temperaturaAtual = getMarsTemperature();
-    setTimeout(() => console.log(`Mars temperature is: ${temperaturaAtual} degree Celsius`), messageDelay());
-}
+// const sendMarsTemperature = () =>{
+//     const temperaturaAtual = getMarsTemperature();
+//     setTimeout(() => console.log(`Mars temperature is: ${temperaturaAtual} degree Celsius`), messageDelay());
+// }
 
-sendMarsTemperature(); // imprime "Mars temperature is: 20 degree Celsius", por exemplo
+// sendMarsTemperature(); // imprime "Mars temperature is: 20 degree Celsius", por exemplo
