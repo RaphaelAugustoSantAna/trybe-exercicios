@@ -35,7 +35,7 @@
 
 //----------------------------------------------------------------------------------------
 
-//exercicio - 2
+//Exercicio - 2
 
 // const planetDistanceFromSun = ({ name, distanceFromSun: { value, measurementUnit } }) =>
 //   `${name} is ${value} ${measurementUnit} apart from the Sun`;
@@ -71,3 +71,18 @@
 //  A ordem de finalização é A, C e B.
 
 //-----------------------------------------------------------------
+
+//Exercicio - 3
+
+// const getPlanet = () => {
+//     const mars = {
+//       name: "Mars",
+//       distanceFromSun: {
+//         value: 227900000,
+//         measurementUnit: "kilometers",
+//       },
+//     };
+//     setTimeout (() => console.log("Returned planet: ", mars),4000);
+//   };
+  
+//   getPlanet(); // imprime Marte depois de 4 segundos
