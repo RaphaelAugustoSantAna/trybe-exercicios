@@ -1,12 +1,13 @@
 import React from "react";
 
-class MyName extends React.Component{
+class About extends React.Component{
     render (){
         return <div>
         <h1>Raphael Sant'Ana</h1>
-        <p>Vai Corinthians!</p>
+        <p>Vai corinthians!</p>
         </div>
     }
 }
 
-export default MyName;
+
+export default About;
