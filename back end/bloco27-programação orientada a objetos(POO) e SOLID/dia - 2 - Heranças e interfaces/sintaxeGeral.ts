@@ -80,11 +80,40 @@ class Animal {
   Papagaio está voando!
   */
 
+
+// USO DO PROTECT 
+
+// Atributos protegidos
+
 //   class Animal {
 //     constructor(protected birthDate: Date) { } // Protected: classe filha pode ler e escrever, mas acessos externos não
 //   }
 //   class Bird extends Animal {
 //     showBirthDate() {
 //       console.log(this.birthDate); // Okay!
+//     }
+//   }
+
+
+
+// USO DO SUPER
+
+// método que não funciona
+
+// class Animal {
+//     constructor(protected birthDate: Date) { }
+//   }
+//   class Bird extends Animal {
+//     constructor(public name: string) { } // ERRO: constructor deve respeitar o contrato da superclasse
+//   }
+
+// Método que funciona
+
+// class Animal {
+//     constructor(protected birthDate: Date) { }
+//   }
+//   class Bird extends Animal {
+//     constructor(public name: string) {
+//       super(new Date());
 //     }
 //   }
