@@ -59,7 +59,7 @@ class Animal {
   Tigre está andando!
   */
 
-  
+
   class Bird extends Animal {
     fly() {
       console.log(`${this.name} está voando!`);
@@ -79,3 +79,12 @@ class Animal {
   4
   Papagaio está voando!
   */
+
+//   class Animal {
+//     constructor(protected birthDate: Date) { } // Protected: classe filha pode ler e escrever, mas acessos externos não
+//   }
+//   class Bird extends Animal {
+//     showBirthDate() {
+//       console.log(this.birthDate); // Okay!
+//     }
+//   }
