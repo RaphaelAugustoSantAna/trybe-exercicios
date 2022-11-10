@@ -238,7 +238,7 @@ const personalMailList = new MailList([email1, email2, email3]);
 const professionalMailList = new MailList([email4, email5]);
 
 console.log('------ personalMailList.getByEmailFrom(\'me@personalmail.com\'):');
-personalMailList.getByEmailsFrom(myEmail).forEach(
+personalMailList.getEmailsTo(myEmail).forEach(
   (mail) => console.log(mail.content),
 );
 
