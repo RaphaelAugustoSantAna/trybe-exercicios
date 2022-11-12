@@ -4,7 +4,8 @@ class Animal {
   }
   class Bird extends Animal {
     move() {
-      super.move();
+      super.move(); // chama o método da classe acima para esta classe
+      // move() { console.log(`${this.name} está se movendo.`); }  a implementação ficaria assim
       console.log(`${this.name} está voando.`);
     }
   }
