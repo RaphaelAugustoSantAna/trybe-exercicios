@@ -1,15 +1,18 @@
-// ./src/index.ts
-
 type Discipline = {
     name: string;
     grade: number;
     letterGrade?: string;
   };
+
+  type School = {
+    name: string;
+    approvalGrade: number;
+  };
   
   type Student = {
     name: string;
     disciplines: Discipline[];
-    school?: string;
+    school: School;
   };
   
   /* Apoio para a função `getGradeLetter` */
@@ -41,8 +44,35 @@ type Discipline = {
   });
   
   /* "Determinar" */
-  const approvedStudents = ({ disciplines }: Student): boolean =>
-    disciplines.every(({ grade }) => grade > 0.7);
+  // const approvedStudents = ({ disciplines }: Student): boolean =>
+  //   disciplines.every(({ grade }) => grade > 0.7);
+  // ./src/index.ts
+
+/// ...
+
+/* Fazemos a modificação da nossa função approvedStudents */
+const approvedStudents = ({ disciplines, school }: Student): boolean =>
+disciplines.every(({ grade }) => grade >= school.approvalGrade);
+
+/* Abaixo temos o exemplo de execução com algumas adições */
+const studentsExample = [
+{
+  name: 'Lee',
+  school: { name: 'Standard', approvalGrade: 0.7 },
+  disciplines: [
+    { name: 'matemática', grade: 0.8 },
+    { name: 'história', grade: 0.9 },
+  ],
+},
+{
+  name: 'Albus',
+  school: 'Hogwarts',
+  disciplines: [
+    { name: 'divination', grade: 0.8 },
+    { name: 'potions', grade: 0.9 },
+  ],
+},
+];
   
   /* "Atualizar" */
   const updateApprovalData = (student: Student): void => {
@@ -66,3 +96,5 @@ type Discipline = {
     setApproved,
     getLetterGrades,
   };
+  
+  setApproved(studentsExample);
