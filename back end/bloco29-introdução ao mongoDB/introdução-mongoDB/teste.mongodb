@@ -1,0 +1,3 @@
+use('exercicio');
+
+db.teste.insertOne({ x: 1 });
