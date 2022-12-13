@@ -82,3 +82,17 @@ db.restaurants.countDocuments({
   // =================================================================================================
 
 
+// exercício operador sort
+
+// 1 - Ordene alfabeticamente os restaurantes pelo nome (atributo name).
+db.restaurants.find().sort({ "name": 1 }).pretty();
+
+// 2 - Ordene os restaurantes de forma decrescente baseado nas avaliações.
+db.restaurants.find().sort({ "rating": -1 }).pretty();
+
+// ===================================================================================================
+
+// Removendo documentos
+
+// 1 - Remova o primeiro restaurante que possua culinária do tipo Ice Cream, Gelato, Yogurt, Ices.
+db.restaurants.deleteOne({ cuisine: "Ice Cream", "Gelato", "Yogurt", "Ice" });
