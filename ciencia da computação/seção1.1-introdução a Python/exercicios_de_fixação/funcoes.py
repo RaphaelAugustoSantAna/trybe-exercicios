@@ -47,5 +47,3 @@ dict(
 dict(
     nome="Ana", sobrenome="Souza", idade=21, turma=1
 )  # o número de parâmetros passados para a função pode variar
-
-print("Olá mundo")
