@@ -1,6 +1,7 @@
 """Perceba que temos uma coleção de valores
 e operações que atuam sobre estes valores,
 de acordo com o que foi definido pelo TAD."""
+import sys
 
 
 class ListaArray:
@@ -31,6 +32,11 @@ array.set(0, "Felipe")
 array.set(1, "Ana")
 array.set(2, "Shirley")
 array.set(3, "Miguel")
+
+
+# sys.getsizeof retorna o tamanho da lista em bytes
+array_memory_size = sys.getsizeof(array.data)
+print(array_memory_size)
 
 # para acessar um elemento do array, utilizamos seu índice
 print(array.get(0))  # saída: Felipe
