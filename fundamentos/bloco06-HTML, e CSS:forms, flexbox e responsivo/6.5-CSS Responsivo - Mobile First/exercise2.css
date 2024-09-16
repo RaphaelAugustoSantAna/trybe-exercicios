@@ -1,0 +1,43 @@
+html {
+    box-sizing: border-box;
+  }
+  
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+  .container{
+      display: flex;
+  }
+
+  p{
+      padding: 15px;
+  }
+
+/* tela para smartphone */
+  @media screen and (max-width:767px) {
+      body{
+          background-color: rgb(169, 169, 204);
+      }
+
+      .container{
+          flex-wrap:wrap ;
+      }
+      
+  }
+
+  /* tela para desktop  */
+  @media screen and (min-width:1024px){
+      body{
+        background-color: greenyellow;
+      }
+
+      .container{
+          flex-wrap: nowrap;
+      }
+  }
+
+
+
+
+  
