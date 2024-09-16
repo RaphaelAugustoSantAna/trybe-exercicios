@@ -1,0 +1,217 @@
+class Liquidificador:
+    def __init__(self, cor, potencia, tensao, preco):
+        self.preco = preco
+        self.cor = cor
+        self._potencia = potencia
+        self._tensao = tensao
+        self.__ligado = False
+        self.__velocidade = 0
+        self.__velocidade_maxima = 3
+        self.__corrente_atual_no_motor = 0
+        # O primeiro parâmetro, o self, 
+        # representa a instância do objeto, ou seja, 
+        # tem acesso ao objeto na memória.
+
+        meu_liquidificador = Liquidificador("Azul", 200, 127, 200)
+        seu_liquidificador = Liquidificador(cor="Vermelho", potencia=250, tensao=220, preco=100)
+
+        # Perceba que é possível ter atributos que não precisam ser passados por meio de parâmetros 
+        # na chamada do construtor. Por exemplo, para o booleano __ligado e o inteiro __velocidade, 
+        # o construtor vai iniciá-los sempre com os valores fixos (hard coded) False e 0, respectivamente.
+    
+    def ligar(self, velocidade):
+        if velocidade > self.__velocidade_maxima or velocidade < 0:
+            raise ValueError(
+                f"Velocidade deve estar entre 0 e {self.__velocidade_maxima}"
+            )
+        
+        self.__velocidade = velocidade
+        self.__corrente_atual_no_motor = (
+            (self._potencia / self._tensao) / self.__velocidade_maxima
+        ) * velocidade
+        self.__ligado = True
+    
+    def desligar(self):
+        self.__ligado = False
+        self.__velocidade = 0
+    
+    def esta_ligado(self):
+        return self.__ligado
+        
+liquidificador_vermelho = Liquidificador("Vermelho", 250, 220, 100)
+liquidificador_vermelho.ligar(1)
+print("Está ligado?", liquidificador_vermelho.esta_ligado())
+# Está ligado? True
+liquidificador_vermelho.desligar()
+print("Está ligado?", liquidificador_vermelho.esta_ligado())
+# Está ligado? False
+
+class Liquidificador:
+    def get_cor(self):
+        return self.__cor.upper()
+    
+    def set_cor(self, nova_cor):
+        if nova_cor.lower() == "turquesa":
+            raise ValueError("Não existe liquidificador turquesa")
+        
+        self.__cor = nova_cor
+
+    def __init__(self,  cor, potencia, tensao, preco):
+        # Observe que usamos o setter para já validarmos o primeiro valor
+        self.set_cor(cor)
+
+        # Demais variavéis omitidas para este exemplo
+
+liquidificador = Liquidificador("Azul","110", "127", "200")
+
+#print(f"A cor atual é {liquidificador.__cor}")
+#AttributeError: 'Liquidificador' object has no attribute '__cor'
+
+print(f"A cor atual é {liquidificador.get_cor()}")
+# A cor atual é AZUL
+liquidificador.set_cor("preto")
+print(f"Após pintarmos, a nova cor é {liquidificador.get_cor()}")
+# Após pintarmos, a nova cor é PRETO
+
+# Métodos com prefixos get_ e set_ costumam, em Python, 
+# ser substituídos por uma forma de acesso mais transparente, 
+# para que possam ser utilizados como se fossem atributos públicos. 
+# Para isso são utilizados os decoradores (decorators) @property e @propriedade.setter, 
+# como no exemplo abaixo:
+
+class Liquidificador:
+    # Getter
+    @property
+    def cor(self):
+        return self.__cor.upper()
+
+    @cor.setter # Repare que é @cor.setter, e não @property.setter
+    def cor(self, nova_cor):
+        if nova_cor.lower() == "turquesa":
+            raise ValueError("Não existe liquidificador turquesa")
+
+        self.__cor = nova_cor
+
+    def __init__(self, cor, potencia, tensao, preco):
+        # Observe que usamos o setter para já validarmos o primeiro valor:
+        # usamos self.cor, que chama o setter, e não self.__cor que manipula
+        # o atributo diretamente
+        self.cor = cor
+
+        # Demais variáveis omitidas para este exemplo
+
+
+liquidificador = Liquidificador("Rosa", "110", "127", "200")
+
+print(liquidificador.cor) # ROSA
+liquidificador.cor = "Vermelho"
+print(liquidificador.cor) # VERMELHO
+
+
+class Pessoa:
+    def __init__(self, nome, saldo_na_conta):
+        self.nome = nome
+        self.saldo_na_conta = saldo_na_conta
+        self.liquidificador = None
+    
+    def comprar_liquidificador(self, liquidificador):
+        if liquidificador.preco <= self.saldo_na_conta:
+            self.saldo_na_conta -= liquidificador.preco
+            self.liquidificador = liquidificador
+
+pessoa_cozinheira = Pessoa("Jacquin", 1000)
+pessoa_cozinheira.comprar_liquidificador(liquidificador_vermelho)
+
+
+# Uma forma de melhorar esta apresentação, 
+# é implementar o método __str__ para a classe que deseja imprimir. 
+# Assim o Python substituirá o print padrão pelo retorno que você desejar. 
+# Veja esse exemplo:
+class Pessoa:
+# ....
+    def __str__(self):
+        return f"{self.nome} - possui {self.saldo_na_conta} reais em sua conta."
+
+print(pessoa_cozinheira)
+# retorno: Jacquin - possui 800 reais em sua conta.
+
+class Eletrodomestico:
+    def __init__(self, cor, potencia, tensao, preco):
+        self.preco = preco
+        self.cor = cor
+        self._potencia = potencia
+        self._tensao = tensao
+        self.__ligado = False
+        self.__velocidade = 0
+        self.__velocidade_maxima = 3
+        self.__corrente_atual_no_motor = 0
+
+    def ligar(self, velocidade):
+        if velocidade > self.__velocidade_maxima or velocidade < 0:
+            raise ValueError(
+                f"Velocidade deve estar entre 0 e {self.__velocidade_maxima}"
+            )
+
+        self.__velocidade = velocidade
+        self.__corrente_atual_no_motor = (
+            (self._potencia / self._tensao) / self.__velocidade_maxima
+        ) * velocidade
+        self.__ligado = True
+
+    def desligar(self):
+        self.__ligado = False
+        self.__velocidade = 0
+
+    def esta_ligado(self):
+        return self.__ligado
+
+    @property
+    def cor(self):
+        return self.__cor.upper()
+
+    @cor.setter
+    def cor(self, nova_cor):
+        self.__cor = nova_cor
+
+# Um método pode chamar um outro método já declarado
+#  na superclasse da seguinte maneira:
+
+class A:
+    def faz_algo(self, valor):
+        print(valor)
+
+
+class B(A):
+    def faz_outra_coisa(self):
+        print("Vou printar o valor pelo método criado em A")
+        # Chama o método da classe A, que neste caso é a superclasse, passando
+        # o `self` explicitamente
+        A.faz_algo(self, valor=1)
+
+
+b = B()
+b.faz_outra_coisa()
+# Vou printar o valor pelo método criado em A
+# 1
+
+class Pessoa:
+    def __init__(self, nome, idade=None, saldo_na_conta=None):
+        self.idade = idade
+        self.nome = nome
+        self.saldo_na_conta = saldo_na_conta
+        self.brinquedos = []
+
+pessoa_1 = Pessoa("Marcelo", 22, 700)
+pessoa_2 = Pessoa("Matheus")
+pessoa_3 = Pessoa("Maria", 33)
+pessoa_4 = Pessoa("Márcia", saldo_na_conta=100)
+
+class Liquidificador(Eletrodomestico):
+    def esta_ligado(self):
+        return False
+
+
+# Super
+class Liquidificador(Eletrodomestico):
+    def esta_ligado(self):
+        return "Sim" if super().esta_ligado() else "Não"
