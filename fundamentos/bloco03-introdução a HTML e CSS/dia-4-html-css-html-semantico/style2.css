@@ -1,0 +1,48 @@
+body{
+    background-color: aquamarine;
+    width: 950px;
+    margin:auto;
+}
+header, section, nav, aside, table, footer{
+    font-family: monospace;
+    font-size: 15px;
+    border-radius: 10px;
+   
+    text-align: center;
+    margin-right: 150px;
+}
+header{
+    background-color: blanchedalmond;
+    min-height: 100px;
+    min-width: 950px;
+}
+
+aside{
+    text-align: center;
+    background-color: antiquewhite;
+    height: 200px;
+    width: 215px;
+    margin-left: 280px;
+   
+}
+
+
+table, tr, td {
+    text-align: center;
+    border: 1px solid #ddd;
+    border-collapse: collapse;
+    margin-left: 10px;
+}
+
+img{
+    width: 250px;
+}
+#video{
+    display: inline-block;
+    text-align: center;
+    margin-left: 110px;
+}
+
+#links{
+display: inline-block;
+}
