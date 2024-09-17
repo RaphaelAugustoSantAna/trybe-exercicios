@@ -1,0 +1,21 @@
+.centralizar{
+
+  text-align: center;
+  
+
+
+}
+li:hover{
+  background-color: green;
+}
+
+li:active{
+  color: white;
+}
+
+li{
+  list-style: none;
+}
+
+
+  
